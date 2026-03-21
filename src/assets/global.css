@@ -1,0 +1,126 @@
+/* ============================================================
+   Niyog & Coir — Global Styles
+   ============================================================ */
+:root {
+  --green-deep:  #1b3d2b;
+  --green-mid:   #2e5e40;
+  --green-light: #4d8060;
+  --green-pale:  #eaf2ec;
+  --green-subtle:#f2f7f3;
+  --ivory:       #faf8f2;
+  --ivory-dark:  #f0ead8;
+  --gold:        #b8922a;
+  --gold-light:  #d4aa4a;
+  --gold-pale:   #fdf3dc;
+  --brown:       #6b4c2a;
+  --text-dark:   #1a1a18;
+  --text-mid:    #484840;
+  --text-light:  #8a8a7e;
+  --white:       #ffffff;
+  --border:      rgba(27,61,43,0.12);
+  --shadow-xs:   0 1px 4px rgba(27,61,43,0.06);
+  --shadow-sm:   0 2px 14px rgba(27,61,43,0.09);
+  --shadow-md:   0 8px 36px rgba(27,61,43,0.13);
+  --shadow-lg:   0 20px 64px rgba(27,61,43,0.17);
+  --radius-sm:   10px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
+  --radius-xl:   36px;
+  --radius-pill: 999px;
+  --transition:  all 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+html { scroll-behavior:smooth }
+body { font-family:'Jost',sans-serif; background:var(--ivory); color:var(--text-dark); overflow-x:hidden; line-height:1.6 }
+a { text-decoration:none; color:inherit }
+ul { list-style:none }
+button { font-family:inherit; cursor:pointer }
+input,select,textarea { font-family:inherit }
+
+.container { max-width:1200px; margin:0 auto; padding:0 28px }
+
+/* BUTTONS */
+.btn {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:0.88rem; font-weight:500; padding:11px 26px;
+  border-radius:var(--radius-pill); border:none;
+  transition:var(--transition); letter-spacing:0.02em; white-space:nowrap; cursor:pointer;
+}
+.btn-primary  { background:var(--green-deep); color:var(--white) }
+.btn-primary:hover  { background:var(--green-mid); box-shadow:0 6px 24px rgba(27,61,43,0.28); transform:translateY(-1px) }
+.btn-secondary { background:transparent; color:var(--green-deep); border:1.5px solid rgba(27,61,43,0.3) }
+.btn-secondary:hover { border-color:var(--green-deep); background:var(--green-pale) }
+.btn-gold  { background:var(--gold); color:var(--white) }
+.btn-gold:hover  { background:#a07820; box-shadow:0 6px 20px rgba(184,146,42,0.3); transform:translateY(-1px) }
+.btn-ghost { background:transparent; color:var(--text-mid); border:1.5px solid var(--border) }
+.btn-ghost:hover { background:var(--green-subtle); border-color:var(--green-light) }
+.btn-lg { padding:13px 32px; font-size:0.92rem }
+.btn-full { width:100%; justify-content:center }
+
+/* SECTION HEADER */
+.section-header { text-align:center; margin-bottom:52px }
+.section-tag { font-size:0.72rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; display:block }
+.section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.2vw,2.6rem); font-weight:700; color:var(--green-deep); line-height:1.15; margin-bottom:12px }
+.section-sub { font-size:0.95rem; color:var(--text-light); max-width:440px; margin:0 auto; line-height:1.7 }
+
+/* PRODUCT CARD */
+.product-card { background:var(--white); border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-xs); border:1px solid var(--border); transition:var(--transition); position:relative }
+.product-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-color:rgba(27,61,43,0.2) }
+.card-img { background:linear-gradient(135deg,var(--green-pale),var(--ivory-dark)); height:200px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden }
+.card-img img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0 }
+.card-badge { position:absolute; top:12px; left:12px; font-size:0.68rem; font-weight:600; padding:4px 11px; border-radius:var(--radius-pill); text-transform:uppercase; letter-spacing:0.06em; z-index:2 }
+.badge-new  { background:var(--green-deep); color:var(--white) }
+.badge-sale { background:#c0392b; color:var(--white) }
+.badge-hot  { background:var(--gold); color:var(--white) }
+.card-body { padding:18px 20px 20px }
+.card-cat { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-light); margin-bottom:5px }
+.card-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--green-deep); margin-bottom:6px; line-height:1.3 }
+.card-desc { font-size:0.82rem; color:var(--text-light); line-height:1.65; margin-bottom:16px }
+.card-footer { display:flex; align-items:center; justify-content:space-between; gap:10px }
+.price-wrap { display:flex; align-items:baseline; gap:7px }
+.price { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--green-deep) }
+.price-old { font-size:0.82rem; color:var(--text-light); text-decoration:line-through }
+.btn-cart { background:var(--green-deep); color:var(--white); border:none; font-size:0.8rem; font-weight:600; padding:8px 16px; border-radius:var(--radius-pill); cursor:pointer; transition:var(--transition); white-space:nowrap }
+.btn-cart:hover { background:var(--green-mid); transform:scale(1.04) }
+
+/* TOAST */
+.toast-wrap { position:fixed; bottom:28px; right:28px; z-index:9999 }
+.toast { background:var(--green-deep); color:var(--white); padding:13px 22px; border-radius:var(--radius-md); font-size:0.88rem; font-weight:500; box-shadow:var(--shadow-lg); border-left:3px solid var(--gold); display:flex; align-items:center; gap:8px }
+.v-enter-active,.v-leave-active { transition:all 0.3s ease }
+.v-enter-from,.v-leave-to { opacity:0; transform:translateY(12px) }
+
+/* PAGE WRAP */
+.page-wrap { min-height:100vh; display:flex; flex-direction:column }
+.page-main { flex:1 }
+.page-hero-sm { background:var(--green-deep); padding:52px 0 }
+.page-hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3rem); font-weight:700; color:var(--white); margin-top:8px }
+
+/* ANNOUNCE BAR */
+.announce-bar { background:var(--green-deep); color:rgba(255,255,255,0.85); text-align:center; font-size:0.76rem; font-weight:500; letter-spacing:0.05em; padding:8px 16px }
+
+/* FORM */
+.form-group { display:flex; flex-direction:column; gap:6px; margin-bottom:16px }
+.form-group label { font-size:0.82rem; font-weight:600; color:var(--text-mid); letter-spacing:0.04em }
+.form-group input,.form-group select,.form-group textarea { padding:11px 16px; border:1.5px solid var(--border); border-radius:var(--radius-sm); background:var(--white); font-size:0.92rem; color:var(--text-dark); transition:var(--transition); outline:none; width:100% }
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus { border-color:var(--green-light); box-shadow:0 0 0 3px rgba(77,128,96,0.12) }
+.form-error { font-size:0.78rem; color:#c0392b; margin-top:2px }
+.form-row-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px }
+
+/* SUMMARY SHARED */
+.summary-title { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:700; color:var(--green-deep); margin-bottom:20px }
+.summary-row { display:flex; justify-content:space-between; font-size:0.9rem; color:var(--text-mid); margin-bottom:10px }
+.summary-divider { height:1px; background:var(--border); margin:10px 0 }
+.summary-total { font-weight:700; font-size:1.05rem; color:var(--green-deep) }
+.free { color:var(--green-light); font-weight:600 }
+.secure-note { text-align:center; font-size:0.74rem; color:var(--text-light); margin-top:12px }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:translateY(0) } }
+@keyframes float { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-8px) } }
+@keyframes cocoFloat { 0%,100% { transform:translateY(0) rotate(-3deg) } 50% { transform:translateY(-14px) rotate(3deg) } }
+@keyframes pulseOut { 0% { transform:translate(-50%,-50%) scale(1); opacity:0.7 } 100% { transform:translate(-50%,-50%) scale(3.5); opacity:0 } }
+@keyframes orbitSpin { from { transform:rotate(0deg) } to { transform:rotate(360deg) } }
+@keyframes counterSpin { from { transform:rotate(0deg) } to { transform:rotate(-360deg) } }
+.fade-up   { animation:fadeUp 0.7s ease both }
+.fade-up-2 { animation:fadeUp 0.7s 0.12s ease both }
+.fade-up-3 { animation:fadeUp 0.7s 0.24s ease both }

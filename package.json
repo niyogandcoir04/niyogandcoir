@@ -1,0 +1,21 @@
+{
+  "name": "niyog-and-coir",
+  "version": "1.0.0",
+  "description": "Niyog & Coir — Eco-Friendly Coconut Coir Products (Educational Project)",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "gh-pages": "^6.0.0",
+    "vite": "^5.0.0"
+  }
+}
